@@ -40,14 +40,13 @@ h1 {
 
 .countdown {
   display: flex;
-  flex-direction: row; /* Display values side by side */
   align-items: center;
   margin-top: 10px;
 }
 
 .countdown-item {
-  margin-right: 10px; /* Add spacing between values */
   text-align: center;
+  margin: 0 5px; /* Adjust spacing between values */
 }
 
 .countdown-value {
@@ -88,7 +87,6 @@ h1 {
   }
 
   .countdown {
-    display: flex;
     flex-direction: column; /* Display values in a column on mobile */
     align-items: center;
     margin-top: 10px;
@@ -96,8 +94,7 @@ h1 {
 
   .countdown-item {
     margin-bottom: 10px;
-    text-align: center;
-    margin-right: 0; /* Reset margin for mobile */
+    margin: 5px 0; /* Adjust spacing between values for mobile */
   }
 
   .countdown-value {
