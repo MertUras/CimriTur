@@ -51,24 +51,44 @@ video{
   color: white;
 }
 /* Mobile Styles */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 480px) {
   * {
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
   }
 
+  body {
+    overflow: hidden; /* Prevent scrolling on mobile */
+  }
+
   .main {
-    height: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   video {
-    width: 100%;
-    height: auto;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
   }
 
   .content {
-    top: -10%; /* Adjust as needed */
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: -5%; /* Adjust as needed */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+  }
+
+  h1 {
+    font-size: 24px; /* Adjust as needed */
   }
 
   .countdown {
@@ -82,6 +102,8 @@ video{
   }
 
   .countdown-value {
+    font-size: 18px;
+    padding: 8px;
     margin: 0;
   }
 }
