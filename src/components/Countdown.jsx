@@ -2,7 +2,11 @@ import React, { useEffect, useState } from 'react';
 import '../index.css'; // Import your styles from index.css
 
 const Countdown = () => {
-  const deadlineTurkeyTime = new Date('2024-02-10T23:59:00+03:00').getTime();
+  // Set the deadline for 5 months from the current date
+  const deadlineTurkeyTime = new Date();
+  deadlineTurkeyTime.setMonth(deadlineTurkeyTime.getMonth() + 5);
+  deadlineTurkeyTime.setHours(23, 59, 0, 0);
+
   const [countdownValues, setCountdownValues] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
 
   useEffect(() => {
