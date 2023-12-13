@@ -29,19 +29,19 @@ const Countdown = () => {
   return (
     <div className="countdown">
       <div className="countdown-item">
-        <div className="countdown-label">Days</div>
+        <div className="countdown-label">Gün</div>
         <div className="countdown-value">{countdownValues.days}</div>
       </div>
       <div className="countdown-item">
-        <div className="countdown-label">Hours</div>
+        <div className="countdown-label">Saat</div>
         <div className="countdown-value">{countdownValues.hours}</div>
       </div>
       <div className="countdown-item">
-        <div className="countdown-label">Minutes</div>
+        <div className="countdown-label">Dakika</div>
         <div className="countdown-value">{countdownValues.minutes}</div>
       </div>
       <div className="countdown-item">
-        <div className="countdown-label">Seconds</div>
+        <div className="countdown-label">Saniye</div>
         <div className="countdown-value">{countdownValues.seconds}</div>
       </div>
     </div>
