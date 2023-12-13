@@ -87,7 +87,7 @@ h1 {
   }
 
   .countdown {
-    flex-direction: column; /* Display values in a column on mobile */
+    flex-direction: row; /* Display values in a column on mobile */
     align-items: center;
     margin-top: 10px;
   }
