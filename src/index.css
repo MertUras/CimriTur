@@ -99,6 +99,7 @@ video{
 
   .countdown-item {
     margin-bottom: 10px;
+    text-align: center; /* Center text within each countdown item */
   }
 
   .countdown-value {
