@@ -1,15 +1,16 @@
-import React, { useEffect, useState, useMemo } from 'react';
+/*import React, { useEffect, useState, useMemo } from 'react';
 import '../index.css'; // Import your styles from index.css
 
 const Countdown = () => {
-  // Set the deadline for 4 months from the current date
-  const deadlineTurkeyTime = useMemo(() => {
+  // Set the initial deadline for 4 months from the current date
+  const initialDeadlineTurkeyTime = useMemo(() => {
     const deadline = new Date();
     deadline.setMonth(deadline.getMonth() + 4);
     deadline.setHours(23, 59, 0, 0);
     return deadline;
   }, []);
 
+  const [deadlineTurkeyTime, setDeadlineTurkeyTime] = useState(initialDeadlineTurkeyTime);
   const [countdownValues, setCountdownValues] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
 
   useEffect(() => {
@@ -26,6 +27,13 @@ const Countdown = () => {
 
       if (distance < 0) {
         clearInterval(interval);
+
+        // Recalculate the deadline for the next 4 months
+        const newDeadlineTurkeyTime = new Date();
+        newDeadlineTurkeyTime.setMonth(newDeadlineTurkeyTime.getMonth() + 4);
+        newDeadlineTurkeyTime.setHours(23, 59, 0, 0);
+        setDeadlineTurkeyTime(newDeadlineTurkeyTime);
+
         setCountdownValues({ days: 0, hours: 0, minutes: 0, seconds: 0 });
       }
     }, 1000);
@@ -56,18 +64,15 @@ const Countdown = () => {
 };
 
 export default Countdown;
+*/
 
-
-
-
-/*import React, { useEffect, useState } from 'react';
-
+import React, { useEffect, useState } from 'react';
 import '../index.css'; // Import your styles from index.css
 
 const Countdown = () => {
-  // Set the deadline for 5 months from the current date
+  // Set the deadline for 4 months from the current date
   const deadlineTurkeyTime = new Date();
-  deadlineTurkeyTime.setMonth(deadlineTurkeyTime.getMonth() + 5);
+  deadlineTurkeyTime.setMonth(deadlineTurkeyTime.getMonth() + 4);
   deadlineTurkeyTime.setHours(23, 59, 0, 0);
 
   const [countdownValues, setCountdownValues] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
@@ -116,4 +121,3 @@ const Countdown = () => {
 };
 
 export default Countdown;
-*/
